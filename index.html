@@ -6,243 +6,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tesla Brasil - Veículos Elétricos e Energia Sustentável</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">TESLA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#sobre">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#galeria">Galeria</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#video">Vídeo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#modelos">Modelos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contato">Contato</a>
-            </li>
-          </ul>
-        </div>
+  <header>
+    <div class="header-container">
+      <h1 class="logo">TESLA</h1>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#modelos">Modelos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section id="sobre" class="hero">
+    <div class="hero-content">
+      <h2>Acelerando a Transição para Energia Sustentável</h2>
+      <p>
+        A Tesla é pioneira mundial em veículos elétricos e soluções de energia limpa.
+        Fundada em 2003, a empresa revolucionou a indústria automotiva com carros elétricos
+        de alto desempenho que combinam tecnologia de ponta, design elegante e compromisso
+        com a sustentabilidade. Nossa missão é acelerar a transição do mundo para a energia
+        sustentável através de veículos elétricos acessíveis, armazenamento de energia e
+        geração de energia solar.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="img/model-s.jpg" alt="Tesla Model S vermelho em estrada">
+    </div>
+  </section>
+
+
+  <section id="galeria" class="gallery">
+    <h2>Nossa Galeria</h2>
+    <p class="section-subtitle">Conheça os veículos que estão mudando o futuro da mobilidade</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="img/model-3.jpg" alt="Tesla Model 3 branco">
+        <div class="gallery-caption">Model 3 - O sedan elétrico mais vendido do mundo</div>
       </div>
-    </nav>
-    <section id="sobre" class="hero">
-      <div class="hero-content">
-        <h2>Acelerando a Transição para Energia Sustentável</h2>
-        <p>
-          A Tesla é pioneira mundial em veículos elétricos e soluções de energia limpa.
-          Fundada em 2003, a empresa revolucionou a indústria automotiva com carros elétricos
-          de alto desempenho que combinam tecnologia de ponta, design elegante e compromisso
-          com a sustentabilidade. Nossa missão é acelerar a transição do mundo para a energia
-          sustentável através de veículos elétricos acessíveis, armazenamento de energia e
-          geração de energia solar.
-        </p>
+      <div class="gallery-item">
+        <img src="img/model-x.jpg" alt="Tesla Model X">
+        <div class="gallery-caption">Model X - SUV com portas Falcon Wing</div>
       </div>
-      <div class="hero-image">
-        <img src="img/model-s.jpg" alt="Tesla Model S vermelho em estrada">
+      <div class="gallery-item">
+        <img src="img/interior.jpg" alt="Interior Tesla">
+        <div class="gallery-caption">Interior minimalista com tecnologia avançada</div>
       </div>
-    </section>
-
-
-    <section id="galeria" class="gallery">
-      <h2>Nossa Galeria</h2>
-      <p class="section-subtitle">Conheça os veículos que estão mudando o futuro da mobilidade</p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="img/model-3.jpg" alt="Tesla Model 3 branco">
-          <div class="gallery-caption">Model 3 - O sedan elétrico mais vendido do mundo</div>
-        </div>
-        <div class="gallery-item">
-          <img src="img/model-x.jpg" alt="Tesla Model X">
-          <div class="gallery-caption">Model X - SUV com portas Falcon Wing</div>
-        </div>
-        <div class="gallery-item">
-          <img src="img/interior.jpg" alt="Interior Tesla">
-          <div class="gallery-caption">Interior minimalista com tecnologia avançada</div>
-        </div>
-        <div class="gallery-item">
-          <img src="img/supercharger.jpg" alt="Tesla carregando">
-          <div class="gallery-caption">Rede de Superchargers em expansão global</div>
-        </div>
+      <div class="gallery-item">
+        <img src="img/supercharger.jpg" alt="Tesla carregando">
+        <div class="gallery-caption">Rede de Superchargers em expansão global</div>
       </div>
-    </section>
+    </div>
+  </section>
 
 
-    <section id="video" class="video-section">
-      <h2>Tesla em Ação</h2>
-      <p class="section-subtitle">Veja a inovação e performance dos nossos veículos</p>
-      <figure class="video-container">
-        <video controls width="100%">
-          <source src="videos/videoplayback.mp4" type="video/mp4">
-          <track src="videos/legenda.vtt" kind="subtitles" srclang="pt" label="Portugues" default>
-          Seu navegador nao suporta o elemento de video.
-        </video>
-        <figcaption>
-          Conheca os novos Model S e Model X - Veiculos eletricos de alta performance
-          com tecnologia de ponta e design revolucionario.
-        </figcaption>
-      </figure>
-    </section>
+  <section id="video" class="video-section">
+    <h2>Tesla em Ação</h2>
+    <p class="section-subtitle">Veja a inovação e performance dos nossos veículos</p>
+    <figure class="video-container">
+      <video controls width="100%">
+        <source src="videos/videoplayback.mp4" type="video/mp4">
+        <track src="videos/legenda.vtt" kind="subtitles" srclang="pt" label="Portugues" default>
+        Seu navegador nao suporta o elemento de video.
+      </video>
+      <figcaption>
+        Conheca os novos Model S e Model X - Veiculos eletricos de alta performance
+        com tecnologia de ponta e design revolucionario.
+      </figcaption>
+    </figure>
+  </section>
 
-    <section id="modelos" class="features">
-      <h2>Por Que Escolher Tesla?</h2>
-      <p class="section-subtitle">Descubra as vantagens dos veículos elétricos Tesla</p>
-      <div class="features-container">
-        <ul class="features-list">
-          <li>
-            <strong>Zero Emissões:</strong> Contribua para um planeta mais limpo sem emissões de gases poluentes
-          </li>
-          <li>
-            <strong>Autopilot:</strong> Sistema avançado de assistência ao motorista com recursos de condução autônoma
-          </li>
-          <li>
-            <strong>Superchargers:</strong> Rede global de carregadores rápidos para viagens sem preocupações
-          </li>
-          <li>
-            <strong>Atualizações Over-the-Air:</strong> Seu carro melhora constantemente com atualizações de software gratuitas
-          </li>
-          <li>
-            <strong>Baixo Custo de Manutenção:</strong> Menos peças móveis significam menos manutenção e mais economia
-          </li>
-          <li>
-            <strong>Performance Superior:</strong> Torque instantâneo e aceleração incomparável
-          </li>
+  <section id="modelos" class="features">
+    <h2>Por Que Escolher Tesla?</h2>
+    <p class="section-subtitle">Descubra as vantagens dos veículos elétricos Tesla</p>
+    <div class="features-container">
+      <ul class="features-list">
+        <li>
+          <strong>Zero Emissões:</strong> Contribua para um planeta mais limpo sem emissões de gases poluentes
+        </li>
+        <li>
+          <strong>Autopilot:</strong> Sistema avançado de assistência ao motorista com recursos de condução autônoma
+        </li>
+        <li>
+          <strong>Superchargers:</strong> Rede global de carregadores rápidos para viagens sem preocupações
+        </li>
+        <li>
+          <strong>Atualizações Over-the-Air:</strong> Seu carro melhora constantemente com atualizações de software gratuitas
+        </li>
+        <li>
+          <strong>Baixo Custo de Manutenção:</strong> Menos peças móveis significam menos manutenção e mais economia
+        </li>
+        <li>
+          <strong>Performance Superior:</strong> Torque instantâneo e aceleração incomparável
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="specs">
+    <h2>Comparativo de Modelos</h2>
+    <p class="section-subtitle">Especificações técnicas dos principais modelos Tesla</p>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Modelo</th>
+            <th>Autonomia</th>
+            <th>0-100 km/h</th>
+            <th>Velocidade Máxima</th>
+            <th>Preço Base (EUA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Model 3</td>
+            <td>513 km</td>
+            <td>6.1 segundos</td>
+            <td>201 km/h</td>
+            <td>$38,990</td>
+          </tr>
+          <tr>
+            <td>Model Y</td>
+            <td>455 km</td>
+            <td>5.0 segundos</td>
+            <td>217 km/h</td>
+            <td>$43,990</td>
+          </tr>
+          <tr>
+            <td>Model S</td>
+            <td>652 km</td>
+            <td>3.2 segundos</td>
+            <td>250 km/h</td>
+            <td>$74,990</td>
+          </tr>
+          <tr>
+            <td>Model X</td>
+            <td>576 km</td>
+            <td>3.9 segundos</td>
+            <td>250 km/h</td>
+            <td>$79,990</td>
+          </tr>
+          <tr>
+            <td>Cybertruck</td>
+            <td>547 km</td>
+            <td>4.1 segundos</td>
+            <td>180 km/h</td>
+            <td>$60,990</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="contato" class="contact">
+    <h2>Entre em Contato</h2>
+    <p class="section-subtitle">Tem dúvidas? Envie uma mensagem para nossa equipe</p>
+    <div class="form-container">
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+        </div>
+        <div class="form-group">
+          <label for="interesse">Modelo de Interesse</label>
+          <select id="interesse" name="interesse">
+            <option value="">Selecione um modelo</option>
+            <option value="model3">Model 3</option>
+            <option value="modely">Model Y</option>
+            <option value="models">Model S</option>
+            <option value="modelx">Model X</option>
+            <option value="cybertruck">Cybertruck</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>TESLA</h3>
+        <p>Acelerando a transição do mundo para a energia sustentável.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Links Rápidos</h4>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#modelos">Modelos</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </div>
-    </section>
-
-    <section class="specs">
-      <h2>Comparativo de Modelos</h2>
-      <p class="section-subtitle">Especificações técnicas dos principais modelos Tesla</p>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Modelo</th>
-              <th>Autonomia</th>
-              <th>0-100 km/h</th>
-              <th>Velocidade Máxima</th>
-              <th>Preço Base (EUA)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Model 3</td>
-              <td>513 km</td>
-              <td>6.1 segundos</td>
-              <td>201 km/h</td>
-              <td>$38,990</td>
-            </tr>
-            <tr>
-              <td>Model Y</td>
-              <td>455 km</td>
-              <td>5.0 segundos</td>
-              <td>217 km/h</td>
-              <td>$43,990</td>
-            </tr>
-            <tr>
-              <td>Model S</td>
-              <td>652 km</td>
-              <td>3.2 segundos</td>
-              <td>250 km/h</td>
-              <td>$74,990</td>
-            </tr>
-            <tr>
-              <td>Model X</td>
-              <td>576 km</td>
-              <td>3.9 segundos</td>
-              <td>250 km/h</td>
-              <td>$79,990</td>
-            </tr>
-            <tr>
-              <td>Cybertruck</td>
-              <td>547 km</td>
-              <td>4.1 segundos</td>
-              <td>180 km/h</td>
-              <td>$60,990</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="footer-section">
+        <h4>Contato</h4>
+        <p>Email: contato@tesla.com.br</p>
+        <p>Telefone: 0800 123 4567</p>
+        <p>São Paulo, SP - Brasil</p>
       </div>
-    </section>
-
-    <section id="contato" class="contact">
-      <h2>Entre em Contato</h2>
-      <p class="section-subtitle">Tem dúvidas? Envie uma mensagem para nossa equipe</p>
-      <div class="form-container">
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-          </div>
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-          </div>
-          <div class="form-group">
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
-          </div>
-          <div class="form-group">
-            <label for="interesse">Modelo de Interesse</label>
-            <select id="interesse" name="interesse">
-              <option value="">Selecione um modelo</option>
-              <option value="model3">Model 3</option>
-              <option value="modely">Model Y</option>
-              <option value="models">Model S</option>
-              <option value="modelx">Model X</option>
-              <option value="cybertruck">Cybertruck</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Enviar Mensagem</button>
-        </form>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>TESLA</h3>
-          <p>Acelerando a transição do mundo para a energia sustentável.</p>
-        </div>
-        <div class="footer-section">
-          <h4>Links Rápidos</h4>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#modelos">Modelos</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Contato</h4>
-          <p>Email: contato@tesla.com.br</p>
-          <p>Telefone: 0800 123 4567</p>
-          <p>São Paulo, SP - Brasil</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Tesla, Inc. Todos os direitos reservados.</p>
-        <p>Projeto acadêmico - Construção Web</p>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tesla, Inc. Todos os direitos reservados.</p>
+      <p>Projeto acadêmico - Construção Web</p>
+    </div>
+  </footer>
 </body>
 
 </html>
