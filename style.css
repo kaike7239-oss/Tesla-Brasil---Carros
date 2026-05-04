@@ -508,13 +508,6 @@ footer {
   }
 }
 
-.cret {
-  max-width: 1200px;
-  margin: 0px auto;
-  padding: 40px 20px;
-  align-items: center;
-  display: grid;
-}
 
 .container-fluid {
   max-width: 100%;
