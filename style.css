@@ -496,3 +496,8 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.cret {
+  justify-content: center;
+}
+
