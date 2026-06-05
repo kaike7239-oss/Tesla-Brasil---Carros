@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tesla Brasil - Veículos Elétricos e Energia Sustentável</title>
+  <title>Tesla Brasil - Veiculos Eletricos e Energia Sustentavel</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -25,7 +25,7 @@
             <a class="nav-link" href="#galeria">Galeria</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#video">Vídeo</a>
+            <a class="nav-link" href="#video">Video</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#modelos">Modelos</a>
@@ -34,58 +34,72 @@
             <a class="nav-link" href="#contato">Contato</a>
           </li>
         </ul>
+        <!-- FUNCIONALIDADE JS 1: Botao Modo Claro/Escuro -->
+        <button id="theme-toggle" class="btn btn-outline-light ms-auto" title="Alternar tema">
+          <span id="theme-icon">🌙</span> <span id="theme-text">Modo Escuro</span>
+        </button>
       </div>
     </div>
   </nav>
+
   <section id="sobre" class="hero">
     <div class="hero-content">
-      <h2>Acelerando a Transição para Energia Sustentável</h2>
+      <h2>Acelerando a Transicao para Energia Sustentavel</h2>
       <p>
-        A Tesla é pioneira mundial em veículos elétricos e soluções de energia limpa.
-        Fundada em 2003, a empresa revolucionou a indústria automotiva com carros elétricos
+        A Tesla e pioneira mundial em veiculos eletricos e solucoes de energia limpa.
+        Fundada em 2003, a empresa revolucionou a industria automotiva com carros eletricos
         de alto desempenho que combinam tecnologia de ponta, design elegante e compromisso
-        com a sustentabilidade. Nossa missão é acelerar a transição do mundo para a energia
-        sustentável através de veículos elétricos acessíveis, armazenamento de energia e
-        geração de energia solar.
+        com a sustentabilidade. Nossa missao e acelerar a transicao do mundo para a energia
+        sustentavel atraves de veiculos eletricos acessiveis, armazenamento de energia e
+        geracao de energia solar.
       </p>
     </div>
     <div class="hero-image">
-      <img src="img/model-s.jpg" alt="Tesla Model S vermelho em estrada">
+      <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model-s-11dVDqudAyARK7Qjahpo4s4UtrpgTZ.jpg" alt="Tesla Model S vermelho em estrada">
     </div>
   </section>
-
 
   <section id="galeria" class="gallery">
     <h2>Nossa Galeria</h2>
-    <p class="section-subtitle">Conheça os veículos que estão mudando o futuro da mobilidade</p>
+    <p class="section-subtitle">Conheca os veiculos que estao mudando o futuro da mobilidade</p>
+    <!-- FUNCIONALIDADE JS 2: Galeria de Imagens com Lightbox -->
     <div class="gallery-grid">
-      <div class="gallery-item">
-        <img src="img/model-3.jpg" alt="Tesla Model 3 branco">
-        <div class="gallery-caption">Model 3 - O sedan elétrico mais vendido do mundo</div>
+      <div class="gallery-item" onclick="openLightbox(0)">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model-3-JzPJoW9xCXb28CIpr7ZRADRBfZ5rcs.jpg" alt="Tesla Model 3 branco">
+        <div class="gallery-caption">Model 3 - O sedan eletrico mais vendido do mundo</div>
       </div>
-      <div class="gallery-item">
-        <img src="img/model-x.jpg" alt="Tesla Model X">
+      <div class="gallery-item" onclick="openLightbox(1)">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/model-x-YVfmtTR6MU1cydPftyNRpumhAeau0C.jpg" alt="Tesla Model X">
         <div class="gallery-caption">Model X - SUV com portas Falcon Wing</div>
       </div>
-      <div class="gallery-item">
-        <img src="img/interior.jpg" alt="Interior Tesla">
-        <div class="gallery-caption">Interior minimalista com tecnologia avançada</div>
+      <div class="gallery-item" onclick="openLightbox(2)">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/interior-do48Cj5BOHtm2V7QSj3XED0WjhfFdN.jpg" alt="Interior Tesla">
+        <div class="gallery-caption">Interior minimalista com tecnologia avancada</div>
       </div>
-      <div class="gallery-item">
-        <img src="img/supercharger.jpg" alt="Tesla carregando">
-        <div class="gallery-caption">Rede de Superchargers em expansão global</div>
+      <div class="gallery-item" onclick="openLightbox(3)">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/supercharger-SqmBspDUstz0gbEHJGmEO8MKnZKAEl.jpg" alt="Tesla carregando">
+        <div class="gallery-caption">Rede de Superchargers em expansao global</div>
       </div>
     </div>
   </section>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <span class="lightbox-prev" onclick="changeImage(-1)">&#10094;</span>
+    <img id="lightbox-img" src="" alt="Imagem ampliada">
+    <span class="lightbox-next" onclick="changeImage(1)">&#10095;</span>
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+    <div id="lightbox-counter" class="lightbox-counter"></div>
+  </div>
 
   <section id="video" class="video-section">
-    <h2>Tesla em Ação</h2>
-    <p class="section-subtitle">Veja a inovação e performance dos nossos veículos</p>
+    <h2>Tesla em Acao</h2>
+    <p class="section-subtitle">Veja a inovacao e performance dos nossos veiculos</p>
     <figure class="video-container">
       <video controls width="100%">
-        <source src="videos/videoplayback.mp4" type="video/mp4">
-        <track src="videos/legenda.vtt" kind="subtitles" srclang="pt" label="Portugues" default>
+        <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/videoplayback-RWoU0nv1GJXJnZp4e0kqm8s4AZt3go.mp4" type="video/mp4">
+        <track src="legenda.vtt" kind="subtitles" srclang="pt" label="Portugues" default>
         Seu navegador nao suporta o elemento de video.
       </video>
       <figcaption>
@@ -97,26 +111,26 @@
 
   <section id="modelos" class="features">
     <h2>Por Que Escolher Tesla?</h2>
-    <p class="section-subtitle">Descubra as vantagens dos veículos elétricos Tesla</p>
+    <p class="section-subtitle">Descubra as vantagens dos veiculos eletricos Tesla</p>
     <div class="features-container">
       <ul class="features-list">
         <li>
-          <strong>Zero Emissões:</strong> Contribua para um planeta mais limpo sem emissões de gases poluentes
+          <strong>Zero Emissoes:</strong> Contribua para um planeta mais limpo sem emissoes de gases poluentes
         </li>
         <li>
-          <strong>Autopilot:</strong> Sistema avançado de assistência ao motorista com recursos de condução autônoma
+          <strong>Autopilot:</strong> Sistema avancado de assistencia ao motorista com recursos de conducao autonoma
         </li>
         <li>
-          <strong>Superchargers:</strong> Rede global de carregadores rápidos para viagens sem preocupações
+          <strong>Superchargers:</strong> Rede global de carregadores rapidos para viagens sem preocupacoes
         </li>
         <li>
-          <strong>Atualizações Over-the-Air:</strong> Seu carro melhora constantemente com atualizações de software gratuitas
+          <strong>Atualizacoes Over-the-Air:</strong> Seu carro melhora constantemente com atualizacoes de software gratuitas
         </li>
         <li>
-          <strong>Baixo Custo de Manutenção:</strong> Menos peças móveis significam menos manutenção e mais economia
+          <strong>Baixo Custo de Manutencao:</strong> Menos pecas moveis significam menos manutencao e mais economia
         </li>
         <li>
-          <strong>Performance Superior:</strong> Torque instantâneo e aceleração incomparável
+          <strong>Performance Superior:</strong> Torque instantaneo e aceleracao incomparavel
         </li>
       </ul>
     </div>
@@ -124,7 +138,7 @@
 
   <section class="specs">
     <h2>Comparativo de Modelos</h2>
-    <p class="section-subtitle">Especificações técnicas dos principais modelos Tesla</p>
+    <p class="section-subtitle">Especificacoes tecnicas dos principais modelos Tesla</p>
     <div class="table-container">
       <table>
         <thead>
@@ -132,8 +146,8 @@
             <th>Modelo</th>
             <th>Autonomia</th>
             <th>0-100 km/h</th>
-            <th>Velocidade Máxima</th>
-            <th>Preço Base (EUA)</th>
+            <th>Velocidade Maxima</th>
+            <th>Preco Base (EUA)</th>
           </tr>
         </thead>
         <tbody>
@@ -179,7 +193,7 @@
 
   <section id="contato" class="contact">
     <h2>Entre em Contato</h2>
-    <p class="section-subtitle">Tem dúvidas? Envie uma mensagem para nossa equipe</p>
+    <p class="section-subtitle">Tem duvidas? Envie uma mensagem para nossa equipe</p>
     <div class="form-container">
       <form action="#" method="POST">
         <div class="form-group">
@@ -218,10 +232,10 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3>TESLA</h3>
-        <p>Acelerando a transição do mundo para a energia sustentável.</p>
+        <p>Acelerando a transicao do mundo para a energia sustentavel.</p>
       </div>
       <div class="footer-section">
-        <h4>Links Rápidos</h4>
+        <h4>Links Rapidos</h4>
         <ul>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#galeria">Galeria</a></li>
@@ -233,15 +247,17 @@
         <h4>Contato</h4>
         <p>Email: contato@tesla.com.br</p>
         <p>Telefone: 0800 123 4567</p>
-        <p>São Paulo, SP - Brasil</p>
+        <p>Sao Paulo, SP - Brasil</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Tesla, Inc. Todos os direitos reservados.</p>
-      <p>Projeto acadêmico - Construção Web</p>
+      <p>&copy; 2025 Tesla, Inc. Todos os direitos reservados.</p>
+      <p>Projeto academico - Construcao Web</p>
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
